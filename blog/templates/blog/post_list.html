@@ -1,7 +1,12 @@
 <html>
-<head><title>head!!!</title></head>
 <body>
-<a href=""><h1>Count Start</h1></a>
-<div><ul><li>123</li><li>456</li><li>789</li></ul></div>
-</body>
+<div><h1><a href="/">Django Girls Blog</a></h1></div>
+
+{% for post in posts %}
+<div>
+<ul><h1><a href="">{{ post.title }}</a></h1>
+<li><p>{{ post.text|linebreaksbr }}</p></li></ul>
+</div>
+{% endfor %}
+<body>
 </html>
